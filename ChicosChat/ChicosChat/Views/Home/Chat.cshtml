@@ -1,0 +1,123 @@
+﻿@using ChicosChat.Models;
+
+@model UserDetailsModel
+
+
+
+@{
+    ViewData["Title"] = "Chat";
+    Model.UserID = Convert.ToInt32(ViewData["UserID"]);
+
+}
+<body class="fullpage_height">
+    <div class="row">
+        <div class="chat_mainbox">
+
+            <div class="chat_friendbox fullpage_height contbox">
+                <div class="heading2">
+                    Friends :
+                </div>
+                @*<form method="post" class="form-signin" asp-action="Friend_Search">
+                        <input asp-for="NewMessage.Message" class="form-control" placeholder="Enter name ..." required="" autofocus="">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+                    </form>*@
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active li_friendlist">
+                        <a class="inheritFull_widthheight" href="#">
+                            <div class="inheritFull_widthheight">
+                                <div class="width_40per height_100per">
+                                    <img src="~/images/avatar_icon.svg" />
+                                </div>
+                                <div class="width_60per height_100per li_friendlist_Details">
+                                    Group
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    @foreach (var item in Model.FriendList)
+                    {
+                        <li class="li_friendlist">
+                            <a class="inheritFull_widthheight" href="#">
+                                <div class="inheritFull_widthheight">
+                                    <div class="width_40per height_100per">
+                                        <img src="~/images/avatar_icon.svg" />
+                                    </div>
+                                    <div class="width_60per height_100per li_friendlist_Details">
+                                        @item.FriendUserName
+                                    </div>
+                                </div>
+
+                            </a>
+                        </li>
+                    }
+                </ul>
+
+
+            </div>
+            <div class="chat_messagebox fullpage_height">
+                <div class="contbox height_100per">
+                    <div class="heading2">
+                        Chat box:
+                    </div>
+
+
+                    <div class=" sub_contbox chat_messagebox_chat">
+                        <ul id="ul_conversationbox" class="ul_friendlist inheritFull_widthheight">
+                            @foreach (var item in Model.Conversation)
+                            {
+                                <li class=""  onload="scrollToBottom()">
+                                    <div class="col-sm-8">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <strong>@item.SentByUsername </strong> <span class="text-muted">commented at @item.SentTime</span>
+                                            </div>
+                                            <div class="panel-body">
+                                                @item.Message
+                                            </div><!-- /panel-body -->
+                                        </div><!-- /panel panel-default -->
+                                    </div><!-- /col-sm-5 -->
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                    <div class="sub_contbox chat_messagebox_text">
+
+
+                        @*<form method="POST" action="Chat">
+                                <div>
+                                    <label>Some property</label>
+                                    <input type="text" name="SomeProperty" value="@Model.NewMessage.Message"/>
+                                    <input type="text" name="SomeProperty2" value="@Model.UserName" />
+                                </div>
+                                <button type="submit">Submit</button>
+                            </form>*@
+
+
+
+                        <form method="post" class="inheritFull_widthheight form-signin" asp-action="Message_Send">
+
+
+                            <textarea asp-for="NewMessage.Message"  class="height_70per inheritFull_widthheight " placeholder="What are you doing right now?"></textarea>
+
+         
+
+
+                            @*<input asp-for="NewMessage.Message" class="inheritFull_widthheight form-control" placeholder="Enter message here ..." required="" autofocus="">*@
+                            <button class="height_30per btn btn-lg btn-primary btn-block" type="submit">Send</button>
+                        </form>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+

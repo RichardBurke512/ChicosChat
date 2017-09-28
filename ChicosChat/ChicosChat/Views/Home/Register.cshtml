@@ -1,0 +1,38 @@
+﻿@using ChicosChat.Models;
+
+@model ChicosChat.Models.LoginViewModel
+
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="row">
+    <div class="container">
+
+
+        <form method="post" class="form-signin" asp-action="Register">
+
+            <h2 class="form-signin-heading">Please enter your details</h2>
+
+            <label class="sr-only">Username</label>
+            <input asp-for="Username"   class="margin_bottom_20 form-control"         placeholder="Username" required="" autofocus="">
+
+            <label class="sr-only">Email</label>
+            <input asp-for="Email"      class="margin_bottom_20 form-control"            placeholder="Email address" required="" autofocus="">
+
+            <label class="sr-only">Password</label>
+            <input asp-for="Password"   class="margin_bottom_20 form-control"         placeholder="Password" required="">
+
+            <label class="sr-only">Re-type Password</label>
+            <input asp-for="RetypePassword" class="margin_bottom_20 form-control"   placeholder="Re-type Password" required="">
+
+            <button class="margin_bottom_20 btn_medium btn btn-lg btn-primary btn-block" type="submit">Create Users</button>
+
+        </form>
+
+
+    </div>
+</div>
+

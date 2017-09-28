@@ -1,0 +1,265 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+
+    .form-signin .checkbox {
+        font-weight: normal;
+    }
+
+    .form-signin .form-control {
+        position: relative;
+        height: auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.row {
+    padding-top: 30px;
+    height: calc(100vh - 52px);
+}
+
+
+.chat_mainbox {
+   /*width : calc((576px * .70833) + 384px);*/
+   height: calc(100vh - 52px);
+}
+
+.chat_friendbox {
+    width: 250px;
+    float: left;
+}
+
+.chat_messagebox {
+    width: calc(100% - 250px);
+    float: left;
+}
+
+.chat_messagebox_chat {
+    height: calc(80% - 30px);
+}
+
+.chat_messagebox_text {
+    height: 20%;
+}
+
+
+
+
+.ul_friendlist {
+    list-style-type: none;
+    -webkit-padding-start: 0em;
+    overflow: auto;
+}
+
+.li_friendlist {
+    height:100px;
+}
+
+.li_friendlist_Details {
+    height: 80px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.heading2 {
+    margin-left: 20px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.contbox {
+    border-width: thin;
+    border-color: #cccccc;
+    border-style: solid;
+    background-color: white;
+}
+
+.sub_contbox {
+    border-width: thin;
+    border-color: #cccccc;
+    border-style: solid;
+    background-color: white;
+}
+
+.fullpage_height {
+    height: calc(100% - 49px);
+}
+
+.inheritFull_widthheight {
+    width: 100%;
+    height: 100%;
+
+    max-width:none;
+    max-height:none;
+
+}
+
+.height_100per {
+    height: 100%;
+}
+
+.height_80per {
+    height: 80%;
+}
+
+.height_70per {
+    height: 70%;
+}
+
+.height_30per {
+    height: 30%;
+}
+
+.height_20per {
+    height: 20%;
+}
+
+
+.width_100per {
+    width: 100%;
+}
+
+.width_80per {
+    width: 80%;
+}
+
+.width_60per {
+    width: 60%;
+    float: left;
+}
+
+.width_40per {
+    width: 40%;
+    float: left;
+}
+
+.width_20per {
+    width: 20%;
+}
+
+.margin_bottom_20 {
+    margin-bottom: 20px !important;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.btn_medium {
+    max-width: 280px;
+}
+
+.thumbnail {
+    padding: 0px;
+}
+
+.panel {
+    position: relative;
+}
+
+    .panel > .panel-heading:after, .panel > .panel-heading:before {
+        position: absolute;
+        top: 11px;
+        left: -16px;
+        right: 100%;
+        width: 0;
+        height: 0;
+        display: block;
+        content: " ";
+        border-color: transparent;
+        border-style: solid solid outset;
+        pointer-events: none;
+    }
+
+    .panel > .panel-heading:after {
+        border-width: 7px;
+        border-right-color: #f7f7f7;
+        margin-top: 1px;
+        margin-left: 2px;
+    }
+
+    .panel > .panel-heading:before {
+        border-right-color: #ddd;
+        border-width: 8px;
+    }

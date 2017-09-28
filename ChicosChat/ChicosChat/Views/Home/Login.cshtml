@@ -1,0 +1,36 @@
+﻿@using ChicosChat.Models;
+
+@model ChicosChat.Models.LoginViewModel
+
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="row">
+    <div class="container">
+
+
+        <form method="post" class="form-signin" asp-action="Login">
+
+            <h2 class="form-signin-heading">Please sign in</h2>
+            <label for="inputEmail" class="sr-only">Username</label>
+            <input asp-for="Username" class="form-control" placeholder="Username/Email address" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input asp-for="Password" class="form-control" placeholder="Password" required="">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <label style="color:Red;">@ViewData["LoginError"]</label>
+            <button class="btn_medium btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
+
+            <input class="btn btn-lg btn-primary btn-block" type="button" value="Register" onclick="@("window.location.href='" + @Url.Action("Register", "Home") + "'");" />
+        </form>
+
+
+    </div>
+</div>
+
